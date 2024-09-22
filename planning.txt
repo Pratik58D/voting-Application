@@ -1,0 +1,52 @@
+voting application
+
+What??  
+a functionality where user can give vote to the given set of candiadates
+
+
+Models?
+Routes?
+voting app functionalty?
+
+1. user sign in / signup
+2.see  the list of candiadates
+3.vote one of the candiadates
+4. there is a route which shows the list of candidates and their live vote counts sorted by there vote count.
+5. user data must contain their one unique government id proof named  : citizenship number
+6.there should be one admin who can only maintain the table of candidates and he can't able to vote at all
+7.user can change their passowrd
+8. user can only login only with citizenship no(any uniq id here) and password
+
+
+-------------------------------------------------------------
+Routes
+
+User authentication 
+/signup POST - create a new user account.
+/login POST - login to an existing account.
+
+Voting :
+/candidates : Get -get the lsit of candidates.
+/vote/:candidateId : Post - vote for a specific candidate
+
+
+voteCounts:
+/vote/count :  Get the list of candidates sorted by their vote counts,
+
+
+
+User Profile :
+
+/profile : Get - get the user's Profile information.
+/profile/password : put - change the user's password.
+
+
+Admin Candidate Management:
+
+/candidate: Post - Create a new candidate.
+/candiadates/:canddateId : PUT - update an existing candidate
+/candidate/:candidateID: Delete- Delete a candidate from  thee list
+
+ 
+
+
