@@ -34,7 +34,7 @@ const userSchema = new mongoose.Schema({
     enum: ["voter", "admin"],
     default: "voter",
   },
-  isvoted: {
+  isVoted: {
     type: Boolean,
     default: false,
   },

@@ -7,6 +7,13 @@ const SignupController = async (req, res) => {
     //assuming the request body conatains the user data
     const data = req.body;
 
+    ///check if a user with same citizenship number already exists
+    const existingUser =  await User.findOne({citizenship:data.citizenship});
+
+    if(existingUser){
+      return res.status(400).json({ message: "User with this citizenship number already exists" });
+    }
+
     const role = data.role;
     // If the role is admin, check if an admin already exists
     if (role === "admin") {
