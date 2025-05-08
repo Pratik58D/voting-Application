@@ -12,9 +12,13 @@ dbconnect()
 
 app.use(express.json());
 
+app.get("/",(req,res)=>{
+    res.send(<h1> Welcome to the bakend of voting App</h1>)
+})
+
 app.use("/api/user",userRoute)
 //candidate Route
-app.use("/api/candidate/",candidateRoute)
+app.use("/api/candidate",candidateRoute)
 
 
 
